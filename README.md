@@ -36,15 +36,15 @@ _What are you in the mood for? **MOOD4** helps you find it. This app gives you s
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-![alt text](https://i.imgur.com/k2IsflG.png "mobile mockup")
+![alt text](https://i.imgur.com/5ZpfaNW.png "mobile mockup")
 
 - Mobile Version
 
-![alt text](https://i.imgur.com/k2IsflG.png "tablet mockup")
+![alt text](https://i.imgur.com/cis2Kp4.png "tablet mockup")
 
 - Tablet Version
 
-![alt text](https://i.imgur.com/k2IsflG.png "desktop mockup")
+![alt text](https://i.imgur.com/RiGUmxs.png "desktop mockup")
 
 - Desktop Version
 
