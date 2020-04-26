@@ -1,4 +1,4 @@
-![](https://i.imgur.com/502u1Mn.gif)
+![](https://miro.medium.com/max/1000/1*FKMtgVPYowHMQ-L7Kz9oIQ.gif)
 # Mood4 App
 
 - [Project Planning](#Project-Planning)
