@@ -20,10 +20,6 @@
 
 ## Project Planning
 
-> 
->
-> 
-
 <br>
 
 ### Overview
@@ -33,8 +29,6 @@ _What are you in the mood for? **MOOD4** helps you find it. This app gives you s
 <br>
 
 ### Wireframes
-
-> Use the Wireframes section to display desktop, tablet and mobile views.
 
 ![alt text](https://i.imgur.com/5ZpfaNW.png "mobile mockup")
 
@@ -48,69 +42,52 @@ _What are you in the mood for? **MOOD4** helps you find it. This app gives you s
 
 - Desktop Version
 
-
-
 <br>
 
 ### MVP
 
-> The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **MOOD4** MVP Will be able to display types of businesses and activities. Location (cities, neighborhoods). For restaurants - price range and cuisine. Also able to display options for the user based on location and type of business/activity. User need to be able to get more options._
 
 <br>
 
 #### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Implement all the features._
+- _Have a simple but functional layout._
 
 <br>
 
 #### Libraries
 
-> Use this section to list all supporting libraries and their role in the project.
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Spring   | _Lorem ipsum dolor sit amet, consectetur._ |
+|   TBD   | _TBD_ |
 
 <br>
 
 #### Data
 
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
-
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
-| WeatherAPI |      yes      | _example.com_ | _example.com/mickeymouse?s=movies&t=10_ |
+| Yelp Fusion|      yes      | _yelp.com_ | _https://www.yelp.com/biz/marumi-new-york?osq=marumi_ |
 
 <br>
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app.
-
 ```
 src
 |__ assets/
-      |__ data-tests
-      |__ fonts
-      |__ graphics
-      |__ images
       |__ mockups
 |__ components/
+      |__ App.jsx
       |__ Header.jsx
-      |__ Hero.jsx
-      |__ Ipsum.jsx
-      |__ Lorem.jsx
-      |__ CTA.jsx
+      |__ Home.jsx
+      |__ Dropdown.jsx
       |__ Footer.jsx
+      |__ Detail.jsx
+      |__ Filter.jsx
+      |__ Result.jsx
 ```
 
 <br>
@@ -121,11 +98,14 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|      App     | functional |   n   |   n   | _Describe._               |
+|    Header    | functional |   n   |   n   | _The header will contain the App logo._               |
+|  Home  | functional |   n   |   n   | _Describe._       |
+|   Dropdown    |   class    |   y   |   n   | _Describe._      |
+|    Footer    | functional |   n   |   n   | _Describe._ |
+|    Detail    | functional |   n   |   n   | _Describe._               |
+|    Filter    | functional |   n   |   n   | _Describe._              |
+|    Result    | functional |   n   |   n   | _Describe._              |
 
 <br>
 
