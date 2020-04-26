@@ -1,6 +1,5 @@
+![alt text](https://i2.wp.com/brightestyoungthings.com/wp-content/uploads/2017/10/tumblr_static_tumblr_static__640.gif?resize=540%2C304&quality=100 "space gif")
 # Mood4 App
-
-# PROJECT 2 README <!-- omit in toc -->
 
 - [Project Planning](#Project-Planning)
   - [Overview](#Overview)
