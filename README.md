@@ -1,4 +1,4 @@
-![alt text](<iframe src="https://giphy.com/embed/9tx0gy37p7oXu" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/space-9tx0gy37p7oXu">via GIPHY</a></p> "space gif")
+![alt text](https://giphy.com/embed/9tx0gy37p7oXu "space gif")
 # Mood4 App
 
 - [Project Planning](#Project-Planning)
