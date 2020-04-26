@@ -45,14 +45,14 @@ _What are you in the mood for? **MOOD4** helps you find it. This app gives you s
 
 ### MVP
 
-_The **MOOD4** MVP Will be able to display types of businesses and activities. Location (cities, neighborhoods). For restaurants - price range and cuisine. Also able to display options for the user based on location and type of business/activity. User need to be able to get more options._
+_The user will be able to select a type of business or activity and location. The **MOOD4** application will provide multiple results with a picture and some basic information related to the search criteria selected._
 
 <br>
 
 #### Goals
 
 - _Implement all the features._
-- _Have a simple but functional layout._
+- _Provide a good UX._
 
 <br>
 
@@ -60,7 +60,8 @@ _The **MOOD4** MVP Will be able to display types of businesses and activities. L
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|   TBD   | _TBD_ |
+|   Axios   | _Used to make API request._ |
+|   React Router   | _Used to manage component routes._ |
 
 <br>
 
@@ -68,7 +69,7 @@ _The **MOOD4** MVP Will be able to display types of businesses and activities. L
 
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
-| Yelp Fusion|      yes      | _yelp.com_ | _https://www.yelp.com/biz/marumi-new-york?osq=marumi_ |
+| Yelp Fusion|      yes      | _api.yelp.com_ | _http://api.yelp.com/v3/businesses/search?term=broadway show&location=new-york&limit=50_ |
 
 <br>
 
@@ -78,6 +79,7 @@ _The **MOOD4** MVP Will be able to display types of businesses and activities. L
 src
 |__ assets/
       |__ mockups
+      |__ JSON configuration files
 |__ components/
       |__ App.jsx
       |__ Header.jsx
@@ -97,52 +99,52 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|      App     | functional |   n   |   n   | _Describe._               |
-|    Header    | functional |   n   |   n   | _The header will contain the App logo._               |
-|  Home  | functional |   n   |   n   | _Describe._       |
-|   Dropdown    |   class    |   y   |   n   | _Describe._      |
-|    Footer    | functional |   n   |   n   | _Describe._ |
-|    Detail    | functional |   n   |   n   | _Describe._               |
-|    Filter    | functional |   n   |   n   | _Describe._              |
-|    Result    | functional |   n   |   n   | _Describe._              |
+|      App     | functional |   y   |   y   | _The Main container of the application._               |
+|    Header    | functional |   y   |   y   | _The header will contain the App logo._               |
+|  Home  | functional |   y   |   y   | _Shows the first page which lets user select business activity and location._       |
+|   Dropdown    |   functional    |   y   |   y   | _Shows a title and a dropdown list._      |
+|    Footer    | functional |   y   |   y   | _Decorative with my name._ |
+|    Detail    | functional |   n   |   n   | _The container that will have the filter and result components._               |
+|    Filter    | functional |   n   |   n   | _A number of dropdowns that can filter results._              |
+|    Result    | functional |   n   |   n   | _An image and basic information about the activity or business._              |
 
 <br>
 
 #### Component Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above. 
->
-> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
-
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                | Priority | Estimated Time | Actual Time |
+| ------------------- | :------: | :------------: | :---------: |
+| App                 |    H     |     2 hrs      |     TBD     |
+| Header              |    H     |     2 hrs      |     TBD     |
+| Home                |    H     |     6 hrs      |     TBD     |
+| Dropdown            |    H     |     3 hrs      |     TDB     |
+| Footer              |    H     |     2 hrs      |     TBD     |
+| Detail              |    H     |     6 hrs      |     TBD     |
+| Filter              |    H     |     9 hrs      |     TBD     |
+| Result              |    H     |     10 hrs     |     TBD     |
+| Total               |          |     40 hrs     |     TBD     |
 
 <br>
 
 #### Helper Functions
 
-> Use this section to document all helper functions– generic functions that can be reused in other applications.
-
 |  Function  | Description                                |
 | :--------: | :----------------------------------------- |
-| Capitalize | _Lorem ipsum dolor sit amet, consectetur._ |
+| TBD | _TBD._ |
 
 <br>
 
 ### Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- _Get user's location._
+- _Get help from UX Design student._
+- _Implement Google Maps._
 
-- _Add user account and auth capabilities._
-- _Utilize the Giphy API to welcome new users with funny gifs._
 
 <br>
 
 ***
-
+<!-- 
 ## Project Delivery
 
 ### Code Showcase
@@ -151,4 +153,4 @@ src
 
 ### Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution, if you'd like.
+> Use this section to list of all major issues encountered and their resolution, if you'd like. -->
