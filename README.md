@@ -1,4 +1,4 @@
-![alt text](https://giphy.com/embed/9tx0gy37p7oXu "space gif")
+![alt text](https://gph.is/2xTl4Bo "space gif")
 # Mood4 App
 
 - [Project Planning](#Project-Planning)
