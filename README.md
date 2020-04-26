@@ -1,4 +1,4 @@
-![alt text](https://i.imgur.com/502u1Mn.gif "space gif")
+![](https://i.imgur.com/502u1Mn.gif)
 # Mood4 App
 
 - [Project Planning](#Project-Planning)
