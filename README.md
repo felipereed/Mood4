@@ -13,9 +13,9 @@
     - [Component Estimates](#Component-Estimates)
     - [Helper Functions](#Helper-Functions)
   - [Post-MVP](#Post-MVP)
-- [Project Delivery](#Project-Delivery)
+<!-- - [Project Delivery](#Project-Delivery)
   - [Code Showcase](#Code-Showcase)
-  - [Code Issues & Resolutions](#Code-Issues--Resolutions)
+  - [Code Issues & Resolutions](#Code-Issues--Resolutions) -->
 
 ## Project Planning
 
@@ -29,17 +29,14 @@ _What are you in the mood for? **MOOD4** helps you find it. This app gives you s
 
 ### Wireframes
 
+- Mobile Version
 ![alt text](https://i.imgur.com/5ZpfaNW.png "mobile mockup")
 
-- Mobile Version
-
+- Tablet Version
 ![alt text](https://i.imgur.com/cis2Kp4.png "tablet mockup")
 
-- Tablet Version
-
-![alt text](https://i.imgur.com/RiGUmxs.png "desktop mockup")
-
 - Desktop Version
+![alt text](https://i.imgur.com/RiGUmxs.png "desktop mockup")
 
 <br>
 
@@ -95,8 +92,6 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |      App     | functional |   y   |   y   | _The Main container of the application._               |
@@ -104,9 +99,9 @@ src
 |  Home  | functional |   y   |   y   | _Shows the first page which lets user select business activity and location._       |
 |   Dropdown    |   functional    |   y   |   y   | _Shows a title and a dropdown list._      |
 |    Footer    | functional |   y   |   y   | _Decorative with my name._ |
-|    Detail    | functional |   n   |   n   | _The container that will have the filter and result components._               |
-|    Filter    | functional |   n   |   n   | _A number of dropdowns that can filter results._              |
-|    Result    | functional |   n   |   n   | _An image and basic information about the activity or business._              |
+|    Detail    | functional |   y   |   y   | _The container that will have the filter and result components._               |
+|    Filter    | functional |   y   |   y   | _A number of dropdowns that can filter results._              |
+|    Result    | functional |   y   |   y   | _An image and basic information about the activity or business._              |
 
 <br>
 
