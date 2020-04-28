@@ -1,0 +1,188 @@
+[
+  {
+    "id": 0,
+    "title": "What are you in the mood for?",
+    "options": [
+      { "value": "restaurants", "label": "Grab a bite" },
+      { "value": "shows", "label": "Catch a show" },
+      { "value": "museums", "label": "See some art" },
+      { "value": "parks", "label": "Enjoy the outdoors" },
+      { "value": "karaoke", "label": "Karaoke" },
+      { "value": "nightclub", "label": "Go dancing" },
+      { "value": "coffee shop", "label": "Get some coffee" },
+      { "value": "bars", "label": "Get some drinks" },
+      { "value": "activities", "label": "Get active" }    ]
+  },
+  {
+    "id": 1,
+    "title": "Location",
+    "linkedDropdown" : [],
+    "options": [
+      { "value": "0", "label": "Use my location" },
+      { "value": "1", "label": "New York City", "neighborhoods": {
+        "title": "Boroughs",
+        "options": [
+          { "value": "0", "label": "Manhattan", "subOptions": {
+            "title": "Neighborhood",
+            "options": [
+              { "value": "Alphabet City", "label": "Alphabet City" },
+              { "value": "Battery Park", "label": "Battery Park" },
+              { "value": "Central Park", "label": "Central Park" },
+              { "value": "Chelsea", "label": "Chelsea" },
+              { "value": "Chinatown", "label": "Chinatown" },
+              { "value": "Civic Center", "label": "Civic Center" },
+              { "value": "East Harlem", "label": "East Harlem" },
+              { "value": "East Village", "label": "East Village" },
+              { "value": "Financial District", "label": "Financial District" },
+              { "value": "Flatiron", "label": "Flatiron" },
+              { "value": "Gramercy", "label": "Gramercy" },
+              { "value": "Greenwich Village", "label": "Greenwich Village" },
+              { "value": "Harlem", "label": "Harlem" },
+              { "value": "Hell's Kitchen", "label": "Hell's Kitchen" },
+              { "value": "Inwood", "label": "Inwood" },
+              { "value": "Kips Bay", "label": "Kips Bay" },
+              { "value": "Koreatown", "label": "Koreatown" },
+              { "value": "Little Italy", "label": "Little Italy" },
+              { "value": "Lower East Side", "label": "Lower East Side" },
+              { "value": "Manhattan Valley", "label": "Manhattan Valley" },
+              { "value": "Marble Hill", "label": "Marble Hill" },
+              { "value": "Meatpacking District", "label": "Meatpacking District" },
+              { "value": "Midtown East", "label": "Midtown East" },
+              { "value": "Midtown West", "label": "Midtown West" },
+              { "value": "Morningside Heights", "label": "Morningside Heights" },
+              { "value": "Murray Hill", "label": "Murray Hill" },
+              { "value": "NoHo", "label": "NoHo" },
+              { "value": "Nolita", "label": "Nolita" },
+              { "value": "Roosevelt Island", "label": "Roosevelt Island" },
+              { "value": "SoHo", "label": "SoHo" },
+              { "value": "South Street Seaport", "label": "South Street Seaport" },
+              { "value": "South Village", "label": "South Village" },
+              { "value": "Stuyvesant Town", "label": "Stuyvesant Town" },
+              { "value": "Theater District", "label": "Theater District" },
+              { "value": "TriBeCa", "label": "TriBeCa" },
+              { "value": "Two Bridges", "label": "Two Bridges" },
+              { "value": "Union Square", "label": "Union Square" },
+              { "value": "Upper East Side", "label": "Upper East Side" },
+              { "value": "Upper West Side", "label": "Upper West Side" },
+              { "value": "Washington Heights", "label": "Washington Heights" },
+              { "value": "West Village", "label": "West Village" },
+              { "value": "Yorkville", "label": "Yorkville" }
+            ]
+          } },
+          { "value": "1", "label": "Brooklyn", "subOptions": {
+            "title": "Neighborhood",
+            "options": [
+              { "value": "Bath Beach", "label": "Bath Beach" },
+              { "value": "Bay Ridge", "label": "Bay Ridge" },
+              { "value": "Bedford Stuyvesant", "label": "Bedford Stuyvesant" },
+              { "value": "Bensonhurst", "label": "Bensonhurst" },
+              { "value": "Bergen Beach", "label": "Bergen Beach" },
+              { "value": "Boerum Hill", "label": "Boerum Hill" },
+              { "value": "Borough Park", "label": "Borough Park" },
+              { "value": "Brighton Beach", "label": "Brighton Beach" },
+              { "value": "Brooklyn Heights", "label": "Brooklyn Heights" },
+              { "value": "Brownsville", "label": "Brownsville" },
+              { "value": "Bushwick", "label": "Bushwick" },
+              { "value": "Canarsie", "label": "Canarsie" },
+              { "value": "Carroll Gardens", "label": "Carroll Gardens" },
+              { "value": "City Line", "label": "City Line" },
+              { "value": "Columbia Street Waterfront District", "label": "Columbia Street Waterfront District" },
+              { "value": "Coney Island", "label": "Coney Island" },
+              { "value": "Crown Heights", "label": "Crown Heights" },
+              { "value": "Cypress Hills", "label": "Cypress Hills" },
+              { "value": "DUMBO", "label": "DUMBO" },
+              { "value": "Ditmas Park", "label": "Ditmas Park" },
+              { "value": "Downtown Brooklyn", "label": "Downtown Brooklyn" },
+              { "value": "Dyker Heights", "label": "Dyker Heights" },
+              { "value": "East Flatbush", "label": "East Flatbush" },
+              { "value": "East New York", "label": "East New York" },
+              { "value": "East Williamsburg", "label": "East Williamsburg" },
+              { "value": "Flatbush", "label": "Flatbush" },
+              { "value": "Flatlands", "label": "Flatlands" },
+              { "value": "Fort Greene", "label": "Fort Greene" },
+              { "value": "Fort Hamilton", "label": "Fort Hamilton" },
+              { "value": "Georgetown", "label": "Georgetown" },
+              { "value": "Gerritson Beach", "label": "Gerritson Beach" },
+              { "value": "Gowanus", "label": "Gowanus" },
+              { "value": "Gravesend", "label": "Gravesend" },
+              { "value": "Greenpoint", "label": "Greenpoint" },
+              { "value": "Highland Park", "label": "Highland Park" },
+              { "value": "Kensington", "label": "Kensington" },
+              { "value": "Manhattan Beach", "label": "Manhattan Beach" },
+              { "value": "Marine Park", "label": "Marine Park" },
+              { "value": "Midwood", "label": "Midwood" },
+              { "value": "Mill Basin", "label": "Mill Basin" },
+              { "value": "Mill Island", "label": "Mill Island" },
+              { "value": "New Lots", "label": "New Lots" },
+              { "value": "Ocean Hill", "label": "Ocean Hill" },
+              { "value": "Ocean Parkway", "label": "Ocean Parkway" },
+              { "value": "Paedergat Basin", "label": "Paedergat Basin" },
+              { "value": "Park Slope", "label": "Park Slope" },
+              { "value": "Prospect Heights", "label": "Prospect Heights" },
+              { "value": "Prospect Lefferts Gardens", "label": "Prospect Lefferts Gardens" },
+              { "value": "Prospect Park", "label": "Prospect Park" },
+              { "value": "Red Hook", "label": "Red Hook" },
+              { "value": "Remsen Village", "label": "Remsen Village" },
+              { "value": "Sea Gate", "label": "Sea Gate" },
+              { "value": "Sheepshead Bay", "label": "Sheepshead Bay" },
+              { "value": "South Slope", "label": "South Slope" },
+              { "value": "South Williamsburg", "label": "South Williamsburg" },
+              { "value": "Spring Creek", "label": "Spring Creek" },
+              { "value": "Starret City", "label": "Starret City" },
+              { "value": "Sunset Park", "label": "Sunset Park" },
+              { "value": "Vinegar Hill", "label": "Vinegar Hill" },
+              { "value": "Weeksville", "label": "Weeksville" },
+              { "value": "Williamsburg - North Side", "label": "Williamsburg - North Side" },
+              { "value": "Williamsburg - South Side", "label": "Williamsburg - South Side" },
+              { "value": "Windsor Terrace", "label": "Windsor Terrace" },
+              { "value": "Wingate", "label": "Wingate" }
+            ]
+          } },
+          { "value": "2", "label": "Queens" },
+          { "value": "3", "label": "Bronx" },
+          { "value": "4", "label": "Staten Island" }
+      ]} 
+    },
+      { "value": "2", "label": "Denver", "neighborhoods": {
+        "title": "Neighborhood",
+        "options": [
+          { "value": "0", "label": "Lodo" }
+      ]} },
+      { "value": "3", "label": "San Francisco", "neighborhoods": {
+        "title": "Neighborhood",
+        "options": [
+          { "value": "0", "label": "Castro" }
+      ]} }    ]
+  },
+  {
+    "id": 2,
+    "title": "Cuisine",
+    "options": [
+      { "value": "Sandwiches", "label": "Sandwiches" },
+      { "value": "Breakfast & Brunch", "label": "Breakfast & Brunch" },
+      { "value": "Chinese", "label": "Chinese" },
+      { "value": "Mexican", "label": "Mexican" },
+      { "value": "American", "label": "American" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "What kind?",
+    "options": [
+
+    ]
+  },
+  {
+    "id": 4,
+    "title": "What kind of bar?",
+    "options": [
+      
+    ]
+  }
+
+]
+
+
+
+  
+  

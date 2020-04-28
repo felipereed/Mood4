@@ -1,0 +1,10 @@
+.result-page {
+  min-height: 550px;
+}
+.specific-filter { 
+  display: auto;
+}
+
+.specific-filter-hidden {
+  display: none;
+}

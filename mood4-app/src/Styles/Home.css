@@ -1,0 +1,30 @@
+.homepage-area {
+  min-height: 550px;
+}
+
+.go-button {
+  cursor: auto;
+}
+
+.go-button-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.location-hidden { 
+  display: none;
+}
+
+.sub-location-hidden {
+  display: none;
+}
+
+.location {
+  display: auto;
+}
+
+.sub-location {
+  display:auto;
+}
