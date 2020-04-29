@@ -1,6 +1,6 @@
 .detail-component-container {
   margin: 15px 10px;
-
+  border-bottom: 3px solid #ed4c5f;
 }
 
 .result-image {

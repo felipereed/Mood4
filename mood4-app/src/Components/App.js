@@ -34,12 +34,12 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/results/:location/:searchTerm" render={(routerProps) =>
-            <Results searchTerm={routerProps.match.params.searchTerm} location={routerProps.match.params.location} />}>
+          <Route path="/results/:location/:searchTerm/:latitude/:longitude" render={(routerProps) =>
+            <Results searchTerm={routerProps.match.params.searchTerm} location={routerProps.match.params.location} latitude={routerProps.match.params.latitude} longitude={routerProps.match.params.longitude} />}>
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }

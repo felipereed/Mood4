@@ -9,11 +9,12 @@ import { Link } from 'react-router-dom';
 export default function Home() {
   const [neighborhood, updateNeighborhood] = useState([])
   const [subNeighborhood, updateSubNeighborhood] = useState([])
-  const [location, updateLocation] = useState([])
-  const [searchTerm, updateSearchTerm] = useState([])
-  const [linkClass, updateLinkClass] = useState('go-button-disabled')
+  const [location, updateLocation] = useState('')
+  const [searchTerm, updateSearchTerm] = useState('')
   const [displayLocation, updateDisplayLocation] = useState('location-hidden')
   const [displaySubLocation, updateDisplaySubLocation] = useState('sub-location-hidden')
+  const [latitude, updateLatitude] = useState(0)
+  const [longitude, updateLongitude] = useState(0)
   useEffect(() => {
   }, [])
   const appCallBack = () => {
@@ -21,12 +22,24 @@ export default function Home() {
   }
   const cityChanged = (event) => {
     console.log(event)
-    
+
+    updateNeighborhood([])
+    updateSubNeighborhood([])
+    updateDisplayLocation('location-hidden')
+    updateDisplaySubLocation('sub-location-hidden')
     // use my location
     if (event.value == 0) {
-      
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(findPosition)
+      } else {
+        alert(`Can't find your location`)
+      }
+      updateLocation('mylocation')
     }
     else {
+      updateLatitude(0)
+      updateLongitude(0)
+
       let neighborhoods = DropdownConfiguration[1].options[event.value].neighborhoods;
       updateNeighborhood(neighborhoods)
       updateLocation(DropdownConfiguration[1].options[event.value].label)
@@ -34,18 +47,24 @@ export default function Home() {
     }
   }
 
+  const findPosition = async (event) => {
+    updateLatitude(event.coords.latitude)
+    updateLongitude(event.coords.longitude)
+  }
+
   const neighborhoodChanged = (event) => {
-    let subNeighborhoods = neighborhood.options[event.value].subOptions;
-    if (subNeighborhoods) {
-      updateSubNeighborhood(subNeighborhoods)
+    if (neighborhood.options[event.value]) {
+      let subNeighborhoods = neighborhood.options[event.value].subOptions;
+      if (subNeighborhoods) {
+        updateSubNeighborhood(subNeighborhoods)
+      }
+      updateLocation(location + " " + neighborhood.options[event.value].label)
+      updateDisplaySubLocation('sub-location')
     }
-    updateLocation(location + " " + neighborhood.options[event.value].label)
-    updateLinkClass('go-button')
-    updateDisplaySubLocation('sub-location')
   }
 
   const subNeighborhoodChanged = (event) => {
-    
+
     updateLocation(location + " " + event.value)
   }
 
@@ -56,7 +75,7 @@ export default function Home() {
 
   return (
     <div className='homepage-area'>
-      <Dropdown dropdownOptions={DropdownConfiguration[0]} callbackFunction={moodPicked}/>
+      <Dropdown dropdownOptions={DropdownConfiguration[0]} callbackFunction={moodPicked} />
       <Dropdown dropdownOptions={DropdownConfiguration[1]} callbackFunction={cityChanged} />
       <div className={displayLocation} >
         <Dropdown dropdownOptions={neighborhood} callbackFunction={neighborhoodChanged} />
@@ -64,7 +83,7 @@ export default function Home() {
       <div className={displaySubLocation} >
         <Dropdown dropdownOptions={subNeighborhood} callbackFunction={subNeighborhoodChanged} />
       </div>
-      <Link className={linkClass} to={`/results/${location}/${searchTerm}`}>Go</Link>
+      <Link className={(searchTerm == '' || location == '') ? 'go-button-disabled' : 'go-button' } to={`/results/${location}/${searchTerm}/${latitude}/${longitude}`}>Go</Link>
     </div>
   )
 }

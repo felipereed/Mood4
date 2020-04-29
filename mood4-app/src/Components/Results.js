@@ -5,7 +5,7 @@ import DropdownConfiguration from "../DropdownConfiguration.json"
 import axios from 'axios'
 import Detail from './Detail';
 
-export default function Results({searchTerm, location}) {
+export default function Results({searchTerm, location, latitude, longitude}) {
   const [filter, updateFilter] = useState([])
   const [displayFilter, updateDisplayFilter] = useState('specific-filter-hidden')
   const [apiResults, updateApiResults] = useState([])
@@ -21,6 +21,7 @@ export default function Results({searchTerm, location}) {
       updateFilter(DropdownConfiguration[4])
       updateDisplayFilter('specific-filter')
     } else {
+      // call API
       updateResults(searchTerm)
     }
   }, [])
@@ -34,9 +35,27 @@ export default function Results({searchTerm, location}) {
     let randomIndex = Math.floor(Math.random() * myArray.length)
     return myArray.splice(randomIndex, 1)
   }
+
+  // https://www.educative.io/edpresso/how-to-sort-an-array-of-objects-in-javascript
+  const sortByDistance = (a, b) => {
+    // a should come before b in the sorted order
+    if(a.distance < b.distance){
+      return -1;
+    // a should come after b in the sorted order
+    } else if(a.distance > b.distance){
+      return 1;
+    // and and b are the same
+    } else{
+      return 0;
+    }
+  }
   const apiCall = async (apiSearchTerm) => {
+    let userLocation = `&location=${location}`;
+    if (latitude != 0 && longitude != 0) {
+      userLocation = `&latitude=${latitude}&longitude=${longitude}`
+    }
     // get search term and location
-    let urlWithParameter = BASE_URL + `&term=${apiSearchTerm}&location=${location}`;
+    let urlWithParameter = BASE_URL + `&term=${apiSearchTerm}${userLocation}`;
 
     // add header to axios solution https://github.com/axios/axios/issues/1744
     let response = await axios.get(urlWithParameter, {
@@ -54,17 +73,19 @@ export default function Results({searchTerm, location}) {
   const updateResults = async (apiSearchTerm) => {
   
     let apiResults = await apiCall(apiSearchTerm)
-    let randomResults = []
+    apiResults.sort(sortByDistance)
+    let results = []
     for (let i = 0; i < 10; i++)
     {
-      randomResults.push(randomlySelectSpliceItem(apiResults))
+      results.push(apiResults.splice(0, 1))
     }
-    updateApiResults(randomResults)
+    updateApiResults(results)
   }
 
   const updateFilterDropdown = (event) => {
     console.log(event)
     updateFilterValue(event.value)
+    //Call API
     updateResults(event.value + " " + searchTerm)
   }
 
