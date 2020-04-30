@@ -1,9 +1,71 @@
 .detail-component-container {
   margin: 15px 10px;
   border-bottom: 3px solid #ed4c5f;
+  display: inline-block;
 }
 
 .result-image {
   max-width: 300px;
 
+}
+
+.map-button {
+  min-width: 80px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.result { 
+  display:auto;
+}
+
+.result-hidden { 
+  display: none;
+}
+
+.google-maps {
+  display: auto;
+}
+
+.google-maps-hidden {
+  display: none;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1){ 
+
+
+    .image-container {
+      display:inline-block;
+      width:300px;
+      height:300px;
+      overflow:hidden;
+      vertical-align:top
+    }
+
+    .detail-component-container {
+      width: 45%;
+    }
+  }
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    .image-container {
+      display:inline-block;
+      width:300px;
+      height:300px;
+      overflow:hidden;
+      vertical-align:top
+    }
+    
+    .detail-component-container {
+      width: 23%;
+    }
 }

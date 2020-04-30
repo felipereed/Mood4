@@ -30,14 +30,16 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/results/:location/:searchTerm/:latitude/:longitude" render={(routerProps) =>
-            <Results searchTerm={routerProps.match.params.searchTerm} location={routerProps.match.params.location} latitude={routerProps.match.params.latitude} longitude={routerProps.match.params.longitude} />}>
-          </Route>
-        </Switch>
+        <div className='page-style'>
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/results/:location/:searchTerm/:latitude/:longitude" render={(routerProps) =>
+              <Results searchTerm={routerProps.match.params.searchTerm} location={routerProps.match.params.location} latitude={routerProps.match.params.latitude} longitude={routerProps.match.params.longitude} />}>
+            </Route>
+          </Switch>
+        </div>
         <Footer />
       </Router>
     </div>

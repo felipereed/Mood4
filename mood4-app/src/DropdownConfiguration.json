@@ -23,7 +23,7 @@
     "options": [
       { "value": "0", "label": "📍 Use my location" },
       { "value": "1", "label": "New York City", "neighborhoods": {
-        "title": "Boroughs",
+        "title": "Borough",
         "options": [
           { "value": "0", "label": "Manhattan", "subOptions": {
             "title": "Neighborhood",

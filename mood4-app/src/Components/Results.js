@@ -75,7 +75,7 @@ export default function Results({searchTerm, location, latitude, longitude}) {
     let apiResults = await apiCall(apiSearchTerm)
     apiResults.sort(sortByDistance)
     let results = []
-    for (let i = 0; i < 10; i++)
+    for (let i = 0; i < 20; i++)
     {
       results.push(apiResults.splice(0, 1))
     }

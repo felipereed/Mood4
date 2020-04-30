@@ -1,8 +1,41 @@
 .header {
-  margin: 20px auto 50px auto;
+  margin: 30px auto 10px auto;
   background-color: white;
 }
 
 .logo {
   max-height: 150px;
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1){ 
+
+    
+    .header {
+      margin: 50px auto 70px auto;
+      background-color: white;
+    }
+    
+    .logo {
+      max-height: 350px;
+    }
+
+  }
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    .header {
+      margin: 50px auto 20px auto;
+      background-color: white;
+    }
+    
+    .logo {
+      min-height: 250px;
+    }
 }
