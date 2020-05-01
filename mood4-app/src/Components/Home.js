@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Dropdown from './Dropdown'
 import '../Styles/Home.css'
 import DropdownConfiguration from "../DropdownConfiguration.json"
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 
 
-export default function Home() {
+export default function Home(props) {
   const [neighborhood, updateNeighborhood] = useState([])
   const [subNeighborhood, updateSubNeighborhood] = useState([])
   const [location, updateLocation] = useState('')
@@ -77,7 +77,6 @@ export default function Home() {
     <div className='homepage-area'>
       <Dropdown dropdownOptions={DropdownConfiguration[0]} callbackFunction={moodPicked} />
       <Dropdown dropdownOptions={DropdownConfiguration[1]} callbackFunction={cityChanged} />
-      <br />
       <div className={displayLocation} >
         <Dropdown dropdownOptions={neighborhood} callbackFunction={neighborhoodChanged} />
       </div>
@@ -85,7 +84,7 @@ export default function Home() {
         <Dropdown dropdownOptions={subNeighborhood} callbackFunction={subNeighborhoodChanged} />
       </div>
       <br />
-      <Link className={(searchTerm == '' || location == '') ? 'go-button-disabled' : 'go-button' } to={`/results/${location}/${searchTerm}/${latitude}/${longitude}`}>Go</Link>
+      <Link style={props.style} className={(searchTerm == '' || location == '') ? 'go-button-disabled' : 'go-button'} to={`/results/${location}/${searchTerm}/${latitude}/${longitude}`}>Go</Link>
     </div>
   )
 }

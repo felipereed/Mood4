@@ -2,6 +2,10 @@
   background-color: #ed4c5f;
   color: white;
   min-height: 60px;
+  position:fixed;
+  left:0;
+  bottom:0;
+  width: 100%;
 }
 
 .footer > p {

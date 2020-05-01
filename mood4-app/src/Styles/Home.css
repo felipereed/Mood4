@@ -4,6 +4,12 @@
 
 .go-button {
   cursor: auto;
+  border: solid;
+  padding: 15px 35px;
+  border-radius: 10px;
+  border: solid #ed4c5f;
+  color: white;
+  background-color: #ed4c5f;
 }
 
 .go-button-disabled {
@@ -11,6 +17,10 @@
   pointer-events: none;
   text-decoration: none;
   opacity: 0.5;
+  border: solid #ed4c5f;
+  color: #ed4c5f;
+  padding: 15px 35px;
+  border-radius: 10px;
 }
 
 .location-hidden { 
@@ -35,9 +45,7 @@
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
 
-    .homepage-area {
-      min-height: 1021px;
-    }
+    
   }
 
   @media screen 
@@ -47,13 +55,6 @@
     
     .homepage-area {
       height: 100%;
-    }
-    .location {
-      display: inline-block;
-    }
-    
-    .sub-location {
-      display:inline-block;
     }
     
 }

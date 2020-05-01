@@ -1,18 +1,14 @@
 .dropdown-desk-menu {
-  margin: 10px;
   display: flex;
   flex-direction: column;
+  max-width: 350px;
+  margin:10px auto;
 }
 .dropdown-desk-menu-row {
   margin: 20px;
   display: flex;
   flex-direction: row;
   justify-content: stretch;
-}
-
-.selector-row {
-  min-width: 250px;
-  margin-left: 20px;
 }
 
 h5 {
@@ -26,7 +22,6 @@ h5 {
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .dropdown-desk-menu {
-      margin: 10px 20%;
       display: flex;
       flex-direction: column;
     }
@@ -35,30 +30,23 @@ h5 {
 
   @media screen 
   and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     
     .dropdown-desk-menu {
-      margin: 50px;
-      display: inline-block;
+      display: flex;
       flex-direction: column;
-      min-width: 250px;
     }
+    
     .dropdown-desk-menu-row {
       margin: 30px;
       display: flex;
       flex-direction: row;
       
     }
-    
-    .selector-row {
-      min-width: 250px;
-      margin-left: 20px;
-    }
-    
+
     h5 {
       font-family: 'Raleway', sans-serif;
-      font-size: 35px;
+      font-size: 25px;
     }
     
 }

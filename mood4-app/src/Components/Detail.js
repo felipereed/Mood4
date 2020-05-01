@@ -37,10 +37,9 @@ export default function Detail({ details }) {
         </div>
         <h2>{details[0].name}</h2>
         <p>{details[0].location.display_address[0]} <br /> {details[0].location.display_address[1]}</p>
-        <button className='map-button' onClick={showMap}>Map</button> 
-        <br />
         <a href={details[0].url} target='_blank'>Click here for more details</a>
         <p>{details[0].display_phone}</p>
+        <button className='map-button' onClick={showMap}>Map</button> 
       </div>
       <div className={displayMap}>
         
