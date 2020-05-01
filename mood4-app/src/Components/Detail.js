@@ -28,28 +28,34 @@ export default function Detail({ details }) {
       </div>
     )
   }
-  console.log(details)
   return (
-    <div className='detail-component-container'>
-      <div className={displayBackToResult}>
-        <div className='image-container'>
-          <img className='result-image' src={details[0].image_url}></img>
+    <div className='detail-component-container'> { details[0] ? 
+      <div>
+        <div className={displayBackToResult}>
+          <div className='image-container'>
+            <img className='result-image' src={details[0].image_url}></img>
+          </div>
+          <h2>{details[0].name}</h2>
+          <p>{details[0].location.display_address[0]} <br /> {details[0].location.display_address[1]}</p>
+          <a href={details[0].url} target='_blank'>Click here for more details</a>
+          <p>{details[0].display_phone}</p>
+          <button className='map-button' onClick={showMap}>Map</button> 
         </div>
-        <h2>{details[0].name}</h2>
-        <p>{details[0].location.display_address[0]} <br /> {details[0].location.display_address[1]}</p>
-        <a href={details[0].url} target='_blank'>Click here for more details</a>
-        <p>{details[0].display_phone}</p>
-        <button className='map-button' onClick={showMap}>Map</button> 
+        <div className={displayMap}>
+          
+          {/* this is the hidden area that when displayed calls the Google Maps API */}
+          {/* shows empty div the whole time until mapIsLoaded is set to true */}
+          {mapIsLoaded ? loadMap() : <div></div> }
+          <h2>{details[0].name}</h2>
+          <p>{details[0].location.display_address[0]} <br /> {details[0].location.display_address[1]}</p>
+          <a href={details[0].url} target='_blank'>Click here for more details</a>
+          <p>{details[0].display_phone}</p>
+          <button className='map-button' onClick={backToResult}>Hide Map</button>
+        </div>
       </div>
-      <div className={displayMap}>
-        
-        {mapIsLoaded ? loadMap() : <div></div> }
-        <h2>{details[0].name}</h2>
-        <p>{details[0].location.display_address[0]} <br /> {details[0].location.display_address[1]}</p>
-        <a href={details[0].url} target='_blank'>Click here for more details</a>
-        <p>{details[0].display_phone}</p>
-        <button className='map-button' onClick={backToResult}>Hide Map</button>
-      </div>
+      :
+      <div></div>
+    }
     </div>
   )
 }

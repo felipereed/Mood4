@@ -9,7 +9,6 @@ export default function Results({searchTerm, location, latitude, longitude}) {
   const [filter, updateFilter] = useState([])
   const [displayFilter, updateDisplayFilter] = useState('specific-filter-hidden')
   const [apiResults, updateApiResults] = useState([])
-  const [filterValue, updateFilterValue] = useState([])
   useEffect(() => {
     if (searchTerm === 'restaurants') {
       updateFilter(DropdownConfiguration[2])
@@ -35,16 +34,12 @@ export default function Results({searchTerm, location, latitude, longitude}) {
     let randomIndex = Math.floor(Math.random() * myArray.length)
     return myArray.splice(randomIndex, 1)
   }
-
   // https://www.educative.io/edpresso/how-to-sort-an-array-of-objects-in-javascript
   const sortByDistance = (a, b) => {
-    // a should come before b in the sorted order
     if(a.distance < b.distance){
       return -1;
-    // a should come after b in the sorted order
     } else if(a.distance > b.distance){
       return 1;
-    // and and b are the same
     } else{
       return 0;
     }
@@ -62,10 +57,7 @@ export default function Results({searchTerm, location, latitude, longitude}) {
       headers: {
         'Authorization': API_KEY
       }
-
     });
-
-    console.log(response);
     //returns the response from the API 
     return response.data.businesses;
   }
@@ -83,8 +75,6 @@ export default function Results({searchTerm, location, latitude, longitude}) {
   }
 
   const updateFilterDropdown = (event) => {
-    console.log(event)
-    updateFilterValue(event.value)
     //Call API
     updateResults(event.value + " " + searchTerm)
   }

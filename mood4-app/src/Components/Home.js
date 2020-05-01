@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Dropdown from './Dropdown'
 import '../Styles/Home.css'
 import DropdownConfiguration from "../DropdownConfiguration.json"
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,12 +17,8 @@ export default function Home(props) {
   const [longitude, updateLongitude] = useState(0)
   useEffect(() => {
   }, [])
-  const appCallBack = () => {
-    console.log('changed')
-  }
+ 
   const cityChanged = (event) => {
-    console.log(event)
-
     updateNeighborhood([])
     updateSubNeighborhood([])
     updateDisplayLocation('location-hidden')
@@ -42,7 +38,7 @@ export default function Home(props) {
 
       let neighborhoods = DropdownConfiguration[1].options[event.value].neighborhoods;
       updateNeighborhood(neighborhoods)
-      updateLocation(DropdownConfiguration[1].options[event.value].label)
+      updateLocation(event.label)
       updateDisplayLocation('location')
     }
   }
@@ -58,14 +54,14 @@ export default function Home(props) {
       if (subNeighborhoods) {
         updateSubNeighborhood(subNeighborhoods)
       }
-      updateLocation(location + " " + neighborhood.options[event.value].label)
       updateDisplaySubLocation('sub-location')
     }
+    updateLocation(location + " " + event.label)
   }
 
   const subNeighborhoodChanged = (event) => {
 
-    updateLocation(location + " " + event.value)
+    updateLocation(location + " " + event.label)
   }
 
   const moodPicked = (event) => {
